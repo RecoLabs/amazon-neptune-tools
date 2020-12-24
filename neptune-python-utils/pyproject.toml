@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "neptune-python-utils"
+version = "0.1.0"
+description = "Neptune Python Utils"
+authors = ["RecoLabs RnD <rnd@recolabs.ai>"]
+readme = "README.rst"
+homepage = "https://github.com/RecoLabs/reco"
+repository = "https://github.com/RecoLabs/reco"
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+gremlinpython = "^3.4.9"
+requests = "^2.25.1"
+backoff = "^1.10.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
