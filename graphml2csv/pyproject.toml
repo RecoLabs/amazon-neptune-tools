@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "graphml2csv"
+version = "0.1.0"
+description = "Amazon GraphML2CSV"
+authors = ["RecoLabs RnD <rnd@recolabs.ai>"]
+readme = "README.rst"
+homepage = "https://github.com/RecoLabs/reco"
+repository = "https://github.com/RecoLabs/reco"
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+reco-common-deps = "*"
+
+
+[[tool.poetry.source]]
+name = "reco_ca_aws"
+url = "https://recolabs-278787244635.d.codeartifact.eu-central-1.amazonaws.com/pypi/reco-python-repository/simple/"
+secondary = true
+
+[tool.poetry.scripts]
+reco-load-data-app = "reco_graphml2csv.__main__:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.black]
+line-length = 160
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -211,7 +211,7 @@ class GraphML2CSV:
         return
 
 
-def main(argv=None):
+def logic(argv=None):
     '''Command line options.'''
 
     program_name = os.path.basename(sys.argv[0])
@@ -269,5 +269,4 @@ def main(argv=None):
 
 
 if __name__ == '__main__':
-    sys.exit(main())
-cls
+    sys.exit(logic())
